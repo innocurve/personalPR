@@ -277,7 +277,7 @@ return (
                 <p className="text-2xl sm:text-3xl text-gray-600 mb-6">{translate('title', language)}</p>
               </div>
               <div className="w-full max-w-2xl mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <ProfileItem label={translate('birth', language)} value={[translate('birthDate', language)]} className="text-center" />
                   <ProfileItem label={translate('mbti', language)} value={[translate('mbtiType', language)]} className="text-center" />
                   <ProfileItem 
@@ -438,8 +438,8 @@ return (
 
 function ProfileItem({ label, value, className = '' }: { label: string, value: string[], className?: string }) {
   return (
-    <div className={`mb-4 ${className}`}>
-      {label && <span className="font-bold text-blue-600 block mb-2 text-xl">{label}</span>}
+    <div className={`mb-2 ${className}`}>
+      {label && <span className="font-bold text-blue-600 block mb-1 text-xl">{label}</span>}
       {(value ?? []).map((item, index) => (
         <p key={index} className="text-lg text-black">{item}</p>
       ))}
